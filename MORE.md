@@ -134,7 +134,147 @@ db info:
         user: 'root',
         password : 'root1234',
         port : 3306, //port mysql
-        database:'sys'  
+        database:'sys' 
+        
+        
+    module.exports={
+    host:"localhost",
+    user:"root",
+    password:"password",
+    database:"sys"
+
+
+-----------------------
+
+nasb e postman:
+
+https://www.softwaretestingmaterial.com/install-postman/
+
+https://www.postman.com/downloads/
+
+gozineye windows ro entekhab kon
+
+
+--------------------
+
+dataye insert shode dar db :
+
+[
+    {
+        "id": 1,
+        "orderDate": "1398/09/10",
+        "orderStatus": "ثبت شده",
+        "customerName": "محمد امینی",
+        "product": "دستگاه تاریخ زن",
+        "customerEmail": "m.amini@gmail.com",
+        "customerAddress": "تهران - ستارخان-خیابان بهار-شماره ۱۱۲",
+        "orderCount": 2
+    },
+    {
+        "id": 2,
+        "orderDate": "1398/11/12",
+        "orderStatus": "تحویل شده",
+        "customerName": "سینا اقایی",
+        "product": "دستگاه بسته بندی وکیوم",
+        "customerEmail": "s.aghayi@gmail.com",
+        "customerAddress": "کرج-گلشهر-شماره ۹۸",
+        "orderCount": 1
+    },
+    {
+        "id": 3,
+        "orderDate": "1398/11/12",
+        "orderStatus": "ارسال شده",
+        "customerName": "مریم یوسفی",
+        "product": "دستگاه دوخت پدالی",
+        "customerEmail": "m.yousefi@yahoo.com",
+        "customerAddress": "اصفهان-بلوار بستان-شماره ۶۵۶",
+        "orderCount": 3
+    },
+    {
+        "id": 4,
+        "orderDate": "1395/04/08",
+        "orderStatus": "تحویل شده",
+        "customerName": "زهرا عراقی",
+        "product": "دستگاه جت پرینتر",
+        "customerEmail": "z.araghi@yahoo.com",
+        "customerAddress": "شیراز-دروازه دولت-شماره ۶۶۶",
+        "orderCount": 4
+    },
+    {
+        "id": 5,
+        "orderDate": "1398/10/10",
+        "orderStatus": "تحویل شده",
+        "customerName": "مهدی یوسفی",
+        "product": "دستگاه دوخت دستی",
+        "customerEmail": "m.yousefi@yahoo.com",
+        "customerAddress": "کرج -مهرشهر-فاز چهار- کوچه ۵۵-پلاک ۱۸",
+        "orderCount": 3
+    },
+    {
+        "id": 6,
+        "orderDate": "1398/10/10",
+        "orderStatus": "ordered",
+        "customerName": "مرتضی کاشی",
+        "product": " دستگاه شیرینگ",
+        "customerEmail": "m.kashi@gmail.com",
+        "customerAddress": "قلعه حسن خان - خیابان چمن پلاک ۵۴",
+        "orderCount": 5
+    },
+    {
+        "id": 7,
+        "orderDate": "1398/10/10",
+        "orderStatus": "ثبت شده",
+        "customerName": "مازیار کاویانی",
+        "product": "دستگاه اسکین پک",
+        "customerEmail": "m.kayvani@aol.com",
+        "customerAddress": "مشهد- چهار راه امام رضا- فلکه اول- پلاک ۴۰۴",
+        "orderCount": 2
+    }
+]
+
+
+———
+
+http://localhost:3012/fetch
+
+http://localhost:3012/insert
+
+{"orderId":3,
+ "orderDate":"1398/11/12",
+ "orderStatus":"delivered",
+ "customerName":"Maryam Yousefi",
+ "product":"Packing Device",
+ "customerEmail":"m.yousefi@yahoo.com",
+ "customerAddress":"Esfahan, Bostan Blvd, no. 909",
+ "orderCount":3
+}
+
+
+---------
+
+SQL :
+
+SELECT * FROM sys.product;
+SELECT * FROM sys.orders
+
+insert into sys.product values(2,'test2');
+
+insert into sys.Orders values(2,'1398/11/12', 'delivered', 'Sina Aghayi', 'Print Device', 's.aghayi@gmail.com', 'Karaj, Golshahr, no. 98', 1)
+
+
+update sys.Orders set 
+customerName='زهرا عراقی', 
+product='دستگاه جت پرینتر',
+customerAddress='شیراز-دروازه دولت-شماره ۶۶۶',
+orderStatus='تحویل شده',
+where id= 4 and orderDate='1395/04/08';
+
+update sys.Orders set 
+orderStatus='ارسال شده',
+where id= 6;
+
+delete from sys.Orders where id=0;
+
 
 
 
