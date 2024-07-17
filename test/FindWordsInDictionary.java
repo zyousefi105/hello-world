@@ -75,7 +75,7 @@ public class FindWordsInDictionary {
 				findWords("oogd", new String[] { "ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good" }));
 		
 		//result: [dog, do, god, go]
-		//this test excludes strings which have more than one frequencies of 'o'
+		//this test excludes strings for which their frequencies of 'o' is more than 1 such as goo and good.
 		System.out.println(
 				findWords("ogd", new String[] { "ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good" }));				
 			
