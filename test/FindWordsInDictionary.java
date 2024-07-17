@@ -32,7 +32,7 @@ public class FindWordsInDictionary {
 				}
 			}
 			
-			//This is to make sure we don't add strings in dictionary with has characters with higher frequency of the inputString
+			//This is to make sure we don't add strings in dictionary which have characters with higher frequency than the inputString
 			if (!notFound && isMatch(map, goal)) {
 
 				result.add(str);
