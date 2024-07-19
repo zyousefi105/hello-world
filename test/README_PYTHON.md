@@ -20,3 +20,23 @@ Please refer to the python file
 Test cases:
 
 We try to check few edge cases such as empty inputString, single character, , repeated character, empty dictionary and etc.
+
+
+Time and Space Complexities:
+
+
+
+If inputString's length is M and the size of the input dictionary is N then:
+
+Time complexity: O(N*M)
+
+First loop: O(M)
+Second loop:  O(N*M)
+So time is O(M) + O(N*M) = O(N*M)
+
+
+Space complexity: O(N*M)
+
+For goal dictionary: O(M)
+For second loop dictionaries: O(N*M)
+So Space is at most : O(M) + O(N*M) = O(N*M)
