@@ -20,13 +20,10 @@ def findWords(inputString, dictionary):
             word = dictionary[i]
             goalcopy = goal.copy()
             valid = True          
-            
-            current = defaultdict(int)
-            
+                        
             for c in word:
                 if goalcopy[c] != 0:
                     goalcopy[c] -= 1                 
-                    current[c] += 1
                 else:
                     valid = False
                     break
