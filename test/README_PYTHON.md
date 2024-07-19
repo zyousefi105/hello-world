@@ -1,8 +1,8 @@
-Intuition
+Intuition:
 
 To arrive at the solution for this problem, we have to first calculate the frequency of each character in inputString and record them in a python dictionary. We call it goal.
 
-Solution Approach
+Solution Approach:
 
 The solution approach involves using a hash table as already suggested by the intuition.
 We need to loop through all words in the input dictionary and then for all characters of the word and check if the character exists in the goal dictionary with the frequency higher than zero. If yes, decrease the frequency, otherwise this word is not a valid case. So we break the loop. For performance we need to break as soon as we find out one character is not in the goal dictionary. Also for each word, we copy the goal dictionary because we don't want to modify the original goal dictionary to be reused for next words.
@@ -19,12 +19,4 @@ Please refer to the python file
 
 Test cases:
 
-We try to check few edge cases such as empty inputString, single character, , repeated character, empty dictionary and etc as below:
-
-
-print(findWords("ate", ["ate", "eat", "tea", "dog", "do", "god", "goo", "go","good"]))
-print(findWords("oogd", ["ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good"]))
-print(findWords("ogd", ["ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good"]))
-print(findWords("d", ["ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good"]))
-print(findWords("", ["ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good"]))
-print(findWords("gooo", ["ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good"]))
+We try to check few edge cases such as empty inputString, single character, , repeated character, empty dictionary and etc.
